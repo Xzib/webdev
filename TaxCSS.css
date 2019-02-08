@@ -1,0 +1,40 @@
+
+      #backgroundImage{
+          background-color:lightblue;
+      }
+      
+      
+      .divMarginAndPaddingHeading{
+        padding: auto;        
+       }
+
+       .divMarginAndPaddingInput{
+        padding: auto;
+        
+        
+       }
+
+       .centralHeading{
+           font-size: 24px;
+           font-weight: bold;
+           text-decoration: underline;
+       }
+       
+       
+       .heading{
+            font-weight: bold;
+            font-size: 18px;
+           
+        }  
+        
+        
+        .inputData input{
+
+            background-color: lightgray;
+            width: auto;
+        }
+
+        #gridView{
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
