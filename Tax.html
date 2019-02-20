@@ -22,15 +22,43 @@
                     <p class="inputData divMarginAndPaddingInput" >
                         <input type="text" placeholder="Enter data here">
                     </p>
+
+                    
                 </div>
                 <div >
                         <p class="heading divMarginAndPaddingHeading">Enter Vendor Name</p>
                         <p class="inputData divMarginAndPaddingInput" >
                             <input type="text" placeholder="Enter data here">
                         </p>
+                        
+                        
                 </div>
                 
             </div>
+
+            <div id="ThreegridView" >
+                <div class="floatingView"> 
+                    <p class="heading divMarginAndPaddingHeading">Enter Item Cost</p>
+                    <p class="inputData divMarginAndPaddingInput" >
+                        <input id="ItemCost" name="itemcost" type="text" placeholder="Enter data here" value="65">
+                        <select >
+                            <option>USD</option>
+                            <option>EUR</option>
+                            <option>GBP</option>
+                            <option>Renminbi</option>
+                        </select>
+                    </p>
+                </div>
+                <div > 
+                    <p class="heading divMarginAndPaddingHeading">To Rs</p>
+                    <p class="inputData divMarginAndPaddingInput" >
+                        <input  id="ConvertToRs" type="text" >
+                    </p>
+                </div>
+                
+        </div>
+
+
             
             <hr>
             
@@ -42,18 +70,18 @@
 
                         <div > 
                             <p class="heading divMarginAndPaddingHeading">CurencyTolerance</p>
-                            <p class="inputData divMarginAndPaddingInput" >
-                                <input type="text" value="1">
+                            <p  class="inputData divMarginAndPaddingInput" >
+                                <input id="CurrencyTolerance" type="text" value="1">
                             </p>
                             <p class="heading divMarginAndPaddingHeading">Insurance</p>
-                            <p class="inputData divMarginAndPaddingInput" >
-                                <input type="text" value="1">
+                            <p  class="inputData divMarginAndPaddingInput" >
+                                <input id="Insurance" type="text" value="1">
                             </p>
                         </div>
                         <div >
                                 <p class="heading divMarginAndPaddingHeading">Assesed Value</p>
-                                <p class="inputData divMarginAndPaddingInput" >
-                                    <input type="text" value="1">
+                                <p  class="inputData divMarginAndPaddingInput" >
+                                    <input id="assessedValue" type="text" value="1">
                                 </p>
                         </div>
 
@@ -89,8 +117,34 @@
             </div>
 
             
-            <button id="CalculateButton">Calculate</button>
-            <button id="SaveButton">Save</button>
+            <button onclick="calculate()"id="CalculateButton" class="buttton">Calculate</button>
+            <button id="SaveButton" class="button">Save</button>
+
+            <script >
+                function calculate() {
+                    var inputItemCost = document.getElementById('ItemCost').value;
+                    var convertedToRs = parseFloat(inputItemCost)*150;
+                    document.getElementById('ConvertToRs').value=convertedToRs.toString();
+                    document.getElementById('assessedValue').value = AssesedValue(convertedToRs).toString();     
+                }
+
+                function AssesedValue(costRs){
+                    
+                    var _curencyTolerance = document.getElementById("CurrencyTolerance").value;
+                    var _insurance = document.getElementById('Insurance').value;
+                    costRs =costRs + costRs * parseFloat(_curencyTolerance/100);
+                    costRs =costRs + costRs * parseFloat(_insurance/100);
+                    return costRs;
+                }
+               
+             
+
+
+            
+            </script>
+
+
+
 
 
 

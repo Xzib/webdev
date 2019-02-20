@@ -34,7 +34,33 @@
             width: auto;
         }
 
+        .dropDownMenu{
+            position: relative;
+            float: left;
+        }
+
         #gridView{
             display: grid;
             grid-template-columns: 50% 50%;
+        }
+
+        #ThreegridView{
+            display: grid;
+            grid-template-columns: 50% 50%;
+        } 
+
+        .button{
+            align-content: center;
+        }
+
+        #CalculateButton{
+
+            background-color: lightgray;
+
+        }
+
+        #SaveButton{
+
+            background-color: lightgreen;
+
         }
