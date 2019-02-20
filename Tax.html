@@ -96,10 +96,10 @@
             <div id="gridView">
 
                         <div>
-                            <p class="inputData divMarginAndPaddingInput"><input type="number" value="2"> ACD</p>
-                            <p class="inputData divMarginAndPaddingInput"><input type="number" value="20"> CD</p>
-                            <p class="inputData divMarginAndPaddingInput"><input type="number" value="17"> ST</p>
-                            <p class="inputData divMarginAndPaddingInput"><input type="number" value="9"> IT</p>
+                            <p class="inputData divMarginAndPaddingInput"><input id="ACD" type="number" value="2"> ACD</p>
+                            <p class="inputData divMarginAndPaddingInput"><input id="CD" type="number" value="20"> CD</p>
+                            <p class="inputData divMarginAndPaddingInput"><input id="ST" type="number" value="17"> ST</p>
+                            <p class="inputData divMarginAndPaddingInput"><input id="IT" type="number" value="9"> IT</p>
 
                         </div>
 
@@ -135,6 +135,21 @@
                     costRs =costRs + costRs * parseFloat(_curencyTolerance/100);
                     costRs =costRs + costRs * parseFloat(_insurance/100);
                     return costRs;
+                }
+
+                function Taxes(assesedValue){
+                    //All Taxes input
+                    var taxes = [document.getElementById("ACD").value, 
+                                    document.getElementById("CD").value, document.getElementById("ST").value,
+                                    document.getElementById("IT").value];
+                                    
+                    
+
+                    //
+
+                    
+
+                
                 }
                
              
