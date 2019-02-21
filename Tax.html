@@ -125,7 +125,9 @@
                     var inputItemCost = document.getElementById('ItemCost').value;
                     var convertedToRs = parseFloat(inputItemCost)*150;
                     document.getElementById('ConvertToRs').value=convertedToRs.toString();
-                    document.getElementById('assessedValue').value = AssesedValue(convertedToRs).toString();     
+                     var _assesedValue = AssesedValue(convertedToRs);
+                     document.getElementById('assessedValue').value = _assesedValue.toString();
+                    Taxes(_assesedValue);     
                 }
 
                 function AssesedValue(costRs){
@@ -134,6 +136,8 @@
                     var _insurance = document.getElementById('Insurance').value;
                     costRs =costRs + costRs * parseFloat(_curencyTolerance/100);
                     costRs =costRs + costRs * parseFloat(_insurance/100);
+
+
                     return costRs;
                 }
 
@@ -142,7 +146,16 @@
                     var taxes = [document.getElementById("ACD").value, 
                                     document.getElementById("CD").value, document.getElementById("ST").value,
                                     document.getElementById("IT").value];
-                                    
+                    taxes[0] = ((taxes[0]/100)*assesedValue).toFixed(2);
+                    taxes[1] = ((taxes[1]/100)*assesedValue).toFixed(2);
+
+                    
+
+
+
+
+                    
+
                     
 
                     //
