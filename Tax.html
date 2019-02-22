@@ -142,20 +142,15 @@
                     var taxes = [document.getElementById("ACD").value, 
                                     document.getElementById("CD").value, document.getElementById("ST").value,
                                     document.getElementById("IT").value];
-                                    
+                    taxes[0] = (taxes[0]/100)*assesedValue;
+                    taxes[1] = (taxes[1]/100)*assesedValue;
+                    taxes[2] = (taxes[0]+taxes[1])*taxes[2];
+                    taxes[3] = (taxes[0]+taxes[1]+taxes[2])*taxes[3];
+
+                    var sum = taxes[0]+taxes[1]+taxes[2]+taxes[3];
+                    alert(sum);
                     
-
-                    //
-
-                    
-
-                
-                }
-               
-             
-
-
-            
+                }            
             </script>
 
 
