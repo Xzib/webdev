@@ -144,28 +144,14 @@
                 function Taxes(assesedValue){
                     //All Taxes input
                     var taxes = [document.getElementById("ACD").value, 
-                                    document.getElementById("CD").value, document.getElementById("ST").value,
+                                    document.getElementById("CD").value,
+                                     document.getElementById("ST").value,
                                     document.getElementById("IT").value];
-<<<<<<< HEAD
+
                     taxes[0] = (taxes[0]/100)*assesedValue;
                     taxes[1] = (taxes[1]/100)*assesedValue;
-                    taxes[2] = (taxes[0]+taxes[1])*taxes[2];
-                    taxes[3] = (taxes[0]+taxes[1]+taxes[2])*taxes[3];
-=======
-                    taxes[0] = ((taxes[0]/100)*assesedValue).toFixed(2);
-                    taxes[1] = ((taxes[1]/100)*assesedValue).toFixed(2);
-
-                    
-
-
-
-
-                    
-
-                    
-
-                    //
->>>>>>> aa4f8f9745463573364704effb0c5c44d83128cd
+                    taxes[2] = (taxes[0]+taxes[1])*taxes[2]/100;
+                    taxes[3] = (taxes[0]+taxes[1]+taxes[2])*taxes[3]/100;
 
                     var sum = taxes[0]+taxes[1]+taxes[2]+taxes[3];
                     alert(sum);
