@@ -41,7 +41,7 @@
                     <p class="heading divMarginAndPaddingHeading">Enter Item Cost</p>
                     <p class="inputData divMarginAndPaddingInput" >
                         <input id="ItemCost" name="itemcost" type="text" placeholder="Enter data here" value="65">
-                        <select >
+                        <select id="selectCurrency">
                             <option>USD</option>
                             <option>EUR</option>
                             <option>GBP</option>
@@ -123,7 +123,8 @@
             <script >
                 function calculate() {
                     var inputItemCost = document.getElementById('ItemCost').value;
-                    var convertedToRs = parseFloat(inputItemCost)*150;
+                    var currencyInRs = currenncySelector();
+                    var convertedToRs = parseFloat(inputItemCost)*currencyInRs;
                     document.getElementById('ConvertToRs').value=convertedToRs.toString();
                      var _assesedValue = AssesedValue(convertedToRs);
                      document.getElementById('assessedValue').value = _assesedValue.toString();
@@ -165,6 +166,31 @@
 
 
                     document.getElementById("GrandTotal").value = _grandTotal.toFixed(2).toString(); 
+
+                }
+
+                function currenncySelector(){
+
+                    var currencyValue = document.getElementById("selectCurrency").value;
+                    switch(currencyValue){
+                        case 'USD':
+                            return 140;
+                            breal;
+                        case 'EUR':
+                            return 160;
+                            breal;
+                        case 'GBP':
+                            return 170;
+                            breal;
+                        case 'Renminbi':
+                            return 21;
+                            breal;
+                        default:
+                            return 150;
+                    }
+                
+
+                    
 
                 }
             </script>
