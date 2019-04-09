@@ -1,0 +1,67 @@
+
+        body{
+            padding: 0;
+            margin: 0;
+        }
+
+
+        #Header 
+        {     
+            background-color: lightgray;
+            width: 100%;
+            height: 30px;
+            padding:2px; 
+        }
+        #Logo{
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: auto;
+            margin-left: 5px;
+        }
+
+        #ButtonContainer{
+
+            width: 250px; 
+            margin: 0 auto;
+        }
+
+        .panels{
+            float: left;
+            border: 2px solid grey;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 4px;
+            margin-top: -20px;
+        }
+        .active{
+            background-color: lightyellow;
+        }
+
+        .highlighted{
+            background-color: gray;
+        }
+
+        textarea{
+            resize: none;
+            border-top: none;
+            border-color: gray;
+            
+             
+        }
+
+        .panel{
+            float: left;
+            
+            
+        }
+
+        iframe{
+            border: none;
+        }
+
+        .hidden{
+            display: none;
+        }
+
+        
+
